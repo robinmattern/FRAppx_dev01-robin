@@ -1,0 +1,25 @@
+{
+  "name": "frapps-02c1-html-custom-app",
+  "description" : "Basec on !_Based on Responsive Navbar by Max S. (5-02-22)",
+  "version": "0.01.001",
+  "private": true,
+  "scripts": {
+    "start": "..\\node_modules\\.bin\\react-scripts  start",
+    "build": "..\\node_modules\\.bin\\react-scripts  build",
+    "test": "..\\node_modules\\.bin\\react-scripts  test",
+    "eject": "..\\node_modules\\.bin\\react-scripts  eject",
+    "client": "..\\node_modules\\.bin\\react-scripts  start"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
