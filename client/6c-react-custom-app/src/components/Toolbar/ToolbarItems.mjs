@@ -38,22 +38,22 @@
 
             console.log( "Clicked on " + aNavItem ); // return false
 
-       if (aNavItem == "Home"    ) { toggleDiv( aNavItem ) }
-       if (aNavItem == "Links"   ) { toggleDiv( aNavItem ) }
+       if (aNavItem === "Home"    ) { toggleDiv( aNavItem ) }
+       if (aNavItem === "Links"   ) { toggleDiv( aNavItem ) }
 
-//     if (aNavItem == "Cards"   ) { toggleDiv( aNavItem )
+//     if (aNavItem === "Cards"   ) { toggleDiv( aNavItem )
 //                                   setPanels( )
-       if (aNavItem == "Cards"   ) { toggleDiv( aNavItem ) }
-       if (aNavItem == "FAQ"     ) { toggleDiv( aNavItem ) }
+       if (aNavItem === "Cards"   ) { toggleDiv( aNavItem ) }
+       if (aNavItem === "FAQ"     ) { toggleDiv( aNavItem ) }
 
-//     if (aNavItem == "Contact" ) { alert( " *** " + aNavItem + " is not defined" ) }
-       if (aNavItem == "Contact" ) { toggleDiv( aNavItem ) }            // .(20426.02.1 RAM Added)
+//     if (aNavItem === "Contact" ) { alert( " *** " + aNavItem + " is not defined" ) }
+       if (aNavItem === "Contact" ) { toggleDiv( aNavItem ) }            // .(20426.02.1 RAM Added)
 
             } // eof NavItem_onClick
 //          -------------------------------------------------------
 
   function  toggleDiv( aName ) {
-        if (mItems[ aName ] == undefined ) { return }
+        if (mItems[ aName ] === undefined ) { return }
 
        var  aSelector   =  mItems[ aName ].Selector
        var  aDisplay    =  mItems[ aName ].Type
@@ -73,12 +73,12 @@
 
 //          aVisibility =  aVisibility ? aVisibility  : "block"
             aVisibility =  aVisibility ? aVisibility  : "none"   // .(20426.03.11 RTAM Assume it's hidden)
-            aVisibility = (aVisibility == "none") ? aDisplay : "none"
+            aVisibility = (aVisibility === "none") ? aDisplay : "none"
             pDiv.style.display = aVisibility
         } else {
-            aVisibility = mItems[ aName ].Visible == 0 ? aDisplay : "none"
+            aVisibility = mItems[ aName ].Visible === 0 ? aDisplay : "none"
             }
-            mItems[ aName ].Visible = (aVisibility != "none")
+            mItems[ aName ].Visible = (aVisibility !== "none")
 
             console.log( `${aName} display is now set to ${aVisibility}` )
             alert(       `${aName} display is now set to ${aVisibility}` )
