@@ -1,0 +1,13 @@
+{
+  "name": "frapps_1c-html-custom-app_by-student",
+  "description" : "Student's HTML Custom App Based on Max's CSS 2022 Course (5-12-22)",
+  "version": "0.01.001",
+  "author": "8020data",
+  "license": "ISC",
+  "main": "index.html",
+  "private": true,
+  "scripts": {
+    "start" : "cd ../../ && live-server --port=55311 --open=/client1/1c-html-custom-app_by-student/src/index.html",
+    "startc": "cd ../../ && live-server --port=55311 --open=/client1/1c-html-custom-app_by-student/src/index.html --browser=chrome "
+      }
+}
