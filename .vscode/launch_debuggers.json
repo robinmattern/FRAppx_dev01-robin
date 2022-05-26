@@ -1,0 +1,26 @@
+     [ [ "file"   , "Current JS File"               , "${file}" ]
+     , [ "chrome" , "Chrome Port 5500"              , "http://localhost:5500" ]
+     , [ "chrome" , "Chrome Port 3000"              , "http://localhost:3000" ]
+     , [ "vscode" , "Edge Port 3000"                , "http://localhost:3000" ]
+
+     , [ "chrome" , "1c-html-custom-app"            , "http://localhost:5500/client/1c-html-custom-app/src/index.html"        ]
+
+     , [ "node"   , "2c-react-empty 51162"          , "client/2c-react-empty"  ]
+     , [ "node"   , "3c-react-button"               , "client/3c-react-button" ]
+     , [ "node"   , "4c-react-no-api 51164"         , "client/4c-react-no-api" ]
+     , [ "node"   , "5c-react-wi-api 51165"         , "client/5c-react-wi-api" ]
+
+     , [ "node"   , "6c-react-custom-app"           , "client/6c-react-custom-app" ]
+
+     , [ "node"   , "4s-react-wi-api 51114"         , "server/4s-json-data"    ]
+     , [ "node"   , "5s-react-wi-api 51115"         , "server/5s-react-app-wi-api" ]
+
+     , [ "chrome" , "m03-css-toolbar"               , "http://localhost:5500/client/0c-css-samples/m03-diving-deeper-into-css/diving-deeper-08-project-finished/index.html" ]
+     , [ "chrome" , "m17_max-final-app"             , "http://localhost:5500/client/0c-css-samples/m17-writing-future-proof-css-code/future-proof-3-finished/index.html"      ]
+     , [ "chrome" , "b02-expanding-cards"           , "http://localhost:5500/client/0c-html-widgets/b02-expanding-cards/index.html" ]
+     , [ "chrome" , "b03-faq-collapse"              , "http://localhost:5500/client/0c-html-widgets/b03-faq-collapse/index.html"    ]
+     , [ "chrome" , "1c1a-html-custom-app_by-rick"  , "http://localhost:5500/client/1c1a-html-custom-app_by-rick/index.html"    ]
+     , [ "chrome" , "1c1b-html-custom-app_final"    , "http://localhost:5500/client/1c1b-html-custom-app_final/src/index.html" ]
+          ]
+
+
