@@ -1,0 +1,238 @@
+/*
+##=========+====================+================================================+
+##RD         index.css          | FRApps HTML Custom App
+##DESC     .--------------------+-------+---------------+------+-----------------+
+#            Stylesheet for 1c-html-custom-app
+#
+##LIC      .--------------------+----------------------------------------------+
+#            Copyright (c) 2022 8020Data-FormR * Released under
+#            MIT License: http://www.opensource.org/licenses/mit-license.php
+#
+##CHGS     .--------------------+----------------------------------------------+
+# .(20512.01  2/15/22 RAM 10:00p| Created
+# .(20524.01  5/24/22 RAM  9:15p| Create new stylesheet copy and/or remove styles
+# .(20524.02  5/24/22 RAM 10:10p| Changed Fonts
+# .(20524.04  5/25/22 RJS  9:00a| Add two new main styles
+# .(20525.03  5/25/22 RJS  9:00a| Change background image
+# .(20525.07  5/25/22 RAM  3:45p| Add guide styles
+# .(20526.01  5/26/22 RJS 10:00a| Add font based Logo
+
+##SRCE     +====================+===============================================+
+*/
+
+/* ---------------------------------------------------------------------------------- *//*
+:root {
+  --dark-green:      #0e4f1f; */                                                        /* .(20524.01.1 RAM This created SASS Variables *//*
+  --highlight-color: #ff1b68;
+    }
+*//*
+* { box-sizing: border-box; } */                                                        /* .(20524.01.2 RAM Used alot, but why?) */
+/*
+    @import url( 'https://fonts.googleapis.com/css?family=Roboto:100,400,900' ); */
+    @import url( 'https://fonts.googleapis.com/css?family=Montserrat:400,700' );        /*#.(20524.02.1 RAM Remove 3 Google fonts) */
+    @import url( 'https://fonts.googleapis.com/css?family=Anton' );                     /*                  Used for Product-overview */
+/*  @import url( 'https://fonts.googleapis.com/css?family=Bookman Old Style'  ); */     /* .(20524.02.2 RAM Get font from Google ) */
+/*  @import url( 'assets/fonts/Font-BookmanOldStyle.css'>                        */     /*#.(20524.02.3 RAM Get local font config file) */
+
+html {
+    height          : 100%;
+    }
+
+body {
+    font-family     : "Montserrat", sans-serif;
+/*  font-family     : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */ /*#.(20524.02.4) */
+/*  font-family     : "Bookman Old Style", sans-serif;                                     /* .(20524.02.4 RAM Change Font) */
+    margin          : 0;
+    padding         : 0;                                                                /* .(20524.01.3 RAM Start with no padding) */
+    padding-top     : 60px;                 /* RAM: 100, 60. Was 3.5rem 56 */           /* .(20524.01.4 RAM Padding starts main element) */
+    }
+/* ---------------------------------------------------------------------------------- */
+
+.guide2-red {                                                                           /* .(20525.07.1 Beg Add Guide styles) */
+    border:  2px solid rgb(255,   0,   0) !important;
+    }
+.guide2-blue {
+    border:  2px solid rgb( 21,   0, 255) !important;
+    }
+.guide2-green {
+    border:  2px solid rgb(  0, 255,  85) !important;
+    }                                                                                   /* .(20525.07.1 End) */
+
+
+/* MAIN_HEADER */
+/* ---------------------------------------------------------------------------------- */
+                                          /* Are these necessary; should they be in toolbar.css */
+.header {
+    position        : fixed;              /* not absolute */
+    top             : 0px;
+    left            : 0px;
+    height          : 56px;               /* RAM: 96 = 100 - 4, 56 = 60 - 4 */          /* .(20524.01.5 RAM Body Padding-top/heading/toolbar-height starts main element) */
+    width           : 100%;
+    background      : #3ADD63;            /* Light Green */
+/*  background      : #99D9E9;  */        /* Light Blue  */
+/*  background      : #80AFB5;  */        /* Blue Grey   */
+/*  font-family     : "Bookman Old Style", sans-serif; */
+    border          : 2px solid transparent;
+    }
+
+.main-header-logo {                                                                     /* .(20526.01.1 RJS Addt font logo).(20524.04.2 RAM Class name was: .main-header-logo__brand) */
+    color           : #0e4f1f;
+    text-decoration : none;
+    font-weight     : bold;
+/*  width           : 20px; */
+    }
+
+.main-header-brand img {
+    height          : 2.5rem;
+    vertical-align  : middle;
+/*  width           : 100%; */
+  }
+
+
+/* NEW IMAGE SECTION */
+/* ---------------------------------------------------------------------------------- */
+main {
+    height          : 496px;
+    border          : 2px solid transparent;
+    }
+
+.image-section h1 {                                                                     /* .(20524.04.3 RJS Added) */
+    margin          : 0px;
+    padding         : 0px;
+    padding-top     : 10px;
+    text-align      : center;
+/*  vertical-align  : middle; */            /* no workie */
+/*  border          : 2px solid transparent; */
+    }
+
+#product-overview {
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+    url("assets/images/freedom.jpg") center/cover no-repeat border-box,
+/*  url("assets/images/monaco-blue.jpg"     ) center/cover no-repeat border-box,      *//* .(20525.03.3 RJS Changed background image) */
+/*  url("assets/images/monaco-blue-soft.jpg") center/cover no-repeat border-box,      *//* .(20525.03.4) */
+    #ff1b68;
+
+    position        : relative;
+/*  top             : 50px; */
+    left            : 0px;
+    width           : 100%;                 /* Same as 100vh */
+    height          : 33%;                  /* same as  33vh */
+    }
+
+#product-overview_xx {
+    background            : linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent);
+    background-color      : #1bfff7;
+
+    background            : url("assets/images/freedom.jpg");
+/*  background            : url("assets/images/monaco-blue-soft.jpg"); */
+/*  background-size       : auto;          */   /* no workie */
+/*  background-size       : contain;       */   /* best fit within element perserving aspect ratio, resizes */
+/*  background-size       : center/cover;  */   /*not valid */
+    background-size       : cover;              /* matches longest width or height of element perserving aspect ratio, resizes */
+/*  background-size       : auto;          */   /* default: maintains position, cropped within height/width, but if a % resizing shows more */
+/*  background-size       : 960px 640px;   */   /* fills width height, up to element size if not %, ignores aspect ratio */
+
+    background-repeat     : no-repeat;
+    background-clip       : border-box;
+    background-color      : #ff1b68;
+
+    position              : relative;
+/*  top                   : 50px;   */
+    left                  : 0px;
+    width                 : 100vw;              /* Same as 100% */
+    height                : 33vh;               /* same as  33% */
+/*  width                 : 100%;   */          /* 960px;    */    /* default for display: block */
+/*  height                : 33%;    */          /* 700px; */
+
+
+/*  background-image      : linear-gradient( 180deg, red 70%, blue 60%, rgba(0,0,0,0.5)); */
+/*  background-image      : radial-gradient( ellipse farthest-corner at 20% 50%, red, blue 70%, green); */
+/*  background-image      : url("freedom.jpg");  */
+
+/*  background-position   : center;              */
+/*  background-position   : left 10% bottom 20%; */
+/*  background-position   : *//* center top left bottom right */
+
+/*  background-size       : cover;      */
+/*  background-size       : 800px 400px;*/
+/*  background-size       : *//* auto, contain, cover, 0vw, calc( 1 + 4), inherit, initial, unset, var( ) */
+
+/*  background-repeat     : no-repeat;  */
+
+/*  background-origin     : *//* content-box, padding-box, border-box */
+/*  background-clip       : *//* content-box, padding-box, border-box */
+
+/*  background-color      : #ff1b68;    */
+    }
+
+#product-overview h1 {
+    font-family           : "Anton", sans-serif;
+    position              : absolute;
+    bottom                : 5%;
+    left                  : 3%;
+    font-size             : 25px;               /* 1.6rem; */
+
+/*  color                 : white;
+    text-shadow           : -3px -4px rgb(234, 124, 40); */
+
+    background            : linear-gradient(to right, #eee, rgb(234, 124, 40));
+   -webkit-background-clip: text;               /* s.b. background-clip: text;  */
+   -webkit-text-fill-color: transparent;
+    }
+
+@media ( min-width: 640px) and ( min-height: 640px) {  /* 40rem = 640px; */
+  #product-overview {
+    height                : 380px;              /*  40vh == 40% x 945px == 378px ??? */
+    background-position   : 50% 25%;
+    }
+  #product-overview h1 {
+    font-size             : 48px;               /* 3rem; */
+    }
+  }
+
+#image1 {
+/*  width                 : 100%;               /* 960px;  for freedom.jpg */
+    width                 : 100%;               /* 1024px; for blueNSX  */
+
+/*  height                : 640px;    */
+    height                : 768px;
+
+    object-fit            : cover;              /* matches longest width or height of element perserving aspect ratio, resizes */
+/*  object-fit            : contain;  */        /* best fit within element perserving aspect ratio, resizes */
+/*  object-fit            : fill;     */        /* fills the  */
+/*  object-fit            : none;     */        /* doesn't fit within dimensions  */
+/*  object-fit            : scale-down;         /* contain or none whichever is smaller  */
+    object-position       : center
+    }
+
+
+/* NEW MAIN SECTION */
+/* ---------------------------------------------------------------------------------- */
+h1 {                                            /* H1 Style if not overridden */
+    display               : block;
+    font-size             : 2em;
+    margin-block-start    : 0.67em;
+    margin-block-end      : 0.67em;
+    margin-inline-start   : 0px;
+    margin-inline-end     : 0px;
+    font-weight           : bold;
+    }
+
+.main-section h1 {                              /* .(20524.04.4 RJS Added) */
+    background            : white;              /*  was: cornflowerblue; */
+/*  position              : relative; */
+    height                : 74px;               /* calc( 74 = (116 = 500px - 384px ) - ( padding-top:40 + Guide2:2 ); */
+/*  width                 : 100%;     */        /* default for display: block */
+    margin                : 0px;
+    padding               : 0px;
+    color                 : black;
+    font-size             : 24px;
+    text-align            : center;
+
+/*  vertical-align        : middle; */          /* no workie */
+/*  margin-top            : 40px;   */          /* space before background-color */
+    padding-top           : 40px;               /* not included in height ??? */
+    }
+/* ---------------------------------------------------------------------------------- */
+
+
