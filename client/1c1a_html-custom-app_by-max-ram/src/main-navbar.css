@@ -1,0 +1,127 @@
+/*
+##=========+====================+================================================+
+##RD         main-navbar.css    | FRApps HTML Custom App Main Navbar Stylesheet
+##DESC     .--------------------+-------+---------------+------+-----------------+
+#            Stylesheet for 1c-html-custom-app
+#
+##LIC      .--------------------+----------------------------------------------+
+#            Copyright (c) 2022 8020Data-FormR * Released under
+#            MIT License: http://www.opensource.org/licenses/mit-license.php
+#
+##CHGS     .--------------------+----------------------------------------------+
+# .(20528.03  5/28/22 RAM  9:15a| Create main-navbar.css
+# .(20525.08  5/25/22 RAM  7:30p| Add shadow to menu items
+# .(20528.03  5/24/22 RAM 10:00a| Use main-navbar stylesheet instead of toolbar.css
+# .(20528.04  5/28/22 RAM 10:30a| Use SASS Variables
+# .(20526.04  5/28/22 RAM 11:00a| Left justify menu items
+
+##SRCE     +====================+===============================================+
+*/
+/*  ---------------------------------- */
+
+.toggle-button {                        /* Hambuger / Sidebar button */
+    width           : 3rem;
+    background      : transparent;
+    border          : none;
+    cursor          : pointer;
+    padding-top     : 0;
+    padding-bottom  : 0;
+    vertical-align  : middle;
+    }
+
+.toggle-button:focus {
+    outline         : none;
+    }
+
+.toggle-button_bar {
+    width           : 100%;
+    height          : 0.2rem;
+    background      : black;
+    display         : block;
+    margin          : 0.6rem 0;
+    }
+/*  ---------------------------------- */
+
+.main-header_brand {                    /* Logo */
+    color           : #0e4f1f;
+    text-decoration : none;
+    font-weight     : bold;
+/*  width           : 20px; */
+    }
+
+.main-header_brand img {
+    height          : 42px;             /* 2.5rem; */
+    vertical-align  : middle;
+/*  width: 100%; */
+    }
+/*  --------------------------------- */
+
+.main-nav_spacer {                      /* Space between left and right items */
+    flex            : 1;
+    }
+/*  --------------------------------- */
+
+.main-nav {                             /* MenuBar Items */
+    display         : none;
+    }
+
+.main-nav_items {
+    margin          : 0;
+    padding         : 0 10px;
+    list-style      : none;
+    display         : flex;
+    }
+
+.main-nav_item {
+    margin          : 0 1rem;   /* top/bottom: 0px, left/right: 16px    */
+    }
+
+.main-nav_item a,
+.mobile-nav_item a {
+    text-decoration : none;
+    color           : black;    /* var(--MenuItems-Color);       *//* .(20528.04.4 RAM No workie) */
+    font-size       : 24px;
+    font-weight     : bold;
+/*  text-shadow     : 3px 1.5px #070707;                         *//* .(20525.08.2) */
+    padding         : 0.2rem 0; /* top/bottom: 0px, left/right: 16px    */
+    }
+
+.main-nav_item a:hover,
+.main-nav_item a:active {
+    color           : white;    /* var(--MenuItems-Hover-Color); *//* .(20528.04.5) */
+    border-bottom   : 5px solid white;
+    }
+/*  ---------------------------------- */
+
+.main-nav_item-cta {                                /* Register/LogIn/LogOut button */
+    animation       : wiggle 400ms 3s 8 ease-out none;
+    }
+
+.main-nav_item-cta a,
+.mobile-nav_item-cta a {
+    color           : white;
+    background      : red;      /* var(--MenuItem-SignIn-Color); *//* .(20528.04.6) */
+    padding         : 0.5rem 1rem;             /* top/bottom: 8px, left/right: 16px */
+    border-radius   : 8px;
+    }
+
+.main-nav_item-cta a:hover,
+.main-nav_item-cta a:active,
+.mobile-nav_item-cta a:hover,
+.mobile-nav_item-cta a:active {
+    color           : red;      /* var(--MenuItem-SignIn-Color); *//* .(20528.04.7) */
+    background      : white;
+    border          : none;
+    }
+/* ---------------------------------- */
+
+@media (min-width: 40rem) {
+ .toggle-button {
+    display         : none;
+  }
+ .main-nav {
+    display         : flex;
+    }
+  }
+
+/* ---------------------------------- */

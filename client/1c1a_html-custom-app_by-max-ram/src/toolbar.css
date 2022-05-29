@@ -11,7 +11,8 @@
 ##CHGS     .--------------------+----------------------------------------------+
 # .(20512.01  2/15/22 RAM 10:00p| Created
 # .(20524.01  5/24/22 RAM 10:00a| Use new stylesheets
-# .(20525.04  5/25/22 RAM 12:00p| Change menu font name and size to 36
+# .(20524.05  5/24/22 RAM  9:00a| Add FormR logo image
+# .(20525.04  5/25/22 RAM 12:00p| Change menu font name and size
 # .(20525.05  5/25/22 RAM  5:00p| Change header background and font colors
 # .(20525.08  5/25/22 RAM  7:30p| Add shadow to menu items
 # .(20526.04  5/26/22 RJS 12:00p| Left justify menu items
@@ -26,7 +27,7 @@
     left            : 0px;
     height          : 56px;                 /* RAM: 96 = 100 - 4, 56 = 60 - 4 */        /* .(20524.01.5 RAM Body Padding-top/heaading/toolbar-height starts main element) */
     width           : 100%;
-    background      : #3ADD63;                                                          /* .(20525.04.1 RAM Change Header color: #3ADD63;Light Green, #99D9E9 Light Blue, #80AFB5 Blue Grey) */
+    background      : #3ADD63;                                                          /* .(20525.05.1 RAM Change Header color: #3ADD63;Light Green, #99D9E9 Light Blue, #80AFB5 Blue Grey) */
     font-family     : "Montserrat", sans-serif;                                         /*#.(20525.04.2)  */
 /*  font-family     : "Bookman Old Style", sans-serif; */                               /* .(20525.04.2 RAM Change Font)  */
     }
@@ -38,18 +39,18 @@
     padding         : 0px 15px;             /* Space between ToorBar left edge and Logo */
     }
 
-.toolbar_logo {
+.toolbar_logo {                                                                        /* .(20524.05.1 Beg RAM Add FormR logo image) */
     margin-left     : 15px;                 /* Space between ToggleButton and Logo */
     width           : 150px;
     margin-top      : -6px;
-    background-image: url( '../../assets/logos/FormR_Logo-02_White_150x50.png' );
-    }
-
-.toolbar_logo a {
-    color           : rgb(255, 255, 255);
+    background-image: url( '../../assets/logos/FormR_Logo-02_White_150x50.png' );      
+    }                                                                                   /* .(20524.05.1 End) */
+/*
+ .toolbar_logo a {                        */                                            /*#.(20524.05.1 Beg RAM Remove) */
+/*  color           : rgb(255, 255, 255);
     text-decoration : none;
-    font-size       : 24px;                 /* was: 2rem */                             /* .(20525.04.3 RAM Change Menu Font Size to 36) */
-    }
+    font-size       : 24px;               *//* was: 2rem */                             /* .(20525.04.3 RAM Change Menu Font Size to 36) */
+/*  }                                     */                                            /*#.(20524.05.1 End) */
 
 .toolbar_spacer {
     flex            : 1;                    /* Space between left and right items */
@@ -76,7 +77,7 @@
     }
 .toolbar_nav-items span:hover,
 .toolbar_nav-items span:active {
-    color           : white;                                                            /* .(20525.05.3 RAM To: #fa923f, was: white*/
+    color           : white;                                                            /* .(20525.05.2 RAM To: #fa923f, was: white*/
     }                                                                                   /* .(20521.01.1 End) */
 
 .toolbar_nav-items a {

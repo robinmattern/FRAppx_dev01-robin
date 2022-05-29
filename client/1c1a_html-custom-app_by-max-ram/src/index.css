@@ -13,19 +13,30 @@
 # .(20524.01  5/24/22 RAM  9:15p| Create new stylesheet copy and/or remove styles
 # .(20524.02  5/24/22 RAM 10:10p| Changed Fonts
 # .(20524.04  5/25/22 RJS  9:00a| Add two new main styles
+# .(20524.05  5/24/22 RAM 11:30a| Define a base font size: rem
 # .(20525.03  5/25/22 RJS  9:00a| Change background image
+# .(20525.05  5/25/22 RAM  5:00p| Change header background and font colors
 # .(20525.07  5/25/22 RAM  3:45p| Add guide styles
+# .(20525.09  5/25/22 RAM  8:30p| Add gradiant to title text over image
 # .(20526.01  5/26/22 RJS 10:00a| Add font based Logo
+# .(20526.05  5/26/22 RAM  1:00p| Remove text gradient
+# .(20528.01  5/28/22 RAM  9:00a| Opps: Use main-header rather than header
+
+
 
 ##SRCE     +====================+===============================================+
 */
-
-/* ---------------------------------------------------------------------------------- *//*
+/* ---------------------------------------------------------------------------------- */
 :root {
-  --dark-green:      #0e4f1f; */                                                        /* .(20524.01.1 RAM This created SASS Variables *//*
-  --highlight-color: #ff1b68;
+/*  font-size               : 16px;           */                                        /* .(20524.05.1 RAM Define a base font size: rem) */
+/*--dark-green              : #0e4f1f;        *//* Dark Green */                        /* .(20524.01.1 RAM This creates SASS variables */
+/*--white                   : white           */
+/*--highlight-color         : #ff1b68;        *//* Red Orange */
+  --MenuItems-Color         : #0e4f1f;          /* Was Dark Green */                    /* .(20528.04.2) */
+  --MenuItems-Hover-Color   : #fa923f;          /* Was White */                         /* .(20528.04.3) */
+  --MenuItem-SignIn-Color   : #ff1b68;          /* Red Orange */                        /* .(20528.04.1 RAM Define variables here */
     }
-*//*
+/*
 * { box-sizing: border-box; } */                                                        /* .(20524.01.2 RAM Used alot, but why?) */
 /*
     @import url( 'https://fonts.googleapis.com/css?family=Roboto:100,400,900' ); */
@@ -39,12 +50,12 @@ html {
     }
 
 body {
-    font-family     : "Montserrat", sans-serif;
-/*  font-family     : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */ /*#.(20524.02.4) */
-/*  font-family     : "Bookman Old Style", sans-serif;                                     /* .(20524.02.4 RAM Change Font) */
+    font-family     : "Montserrat", sans-serif;                                         /*#.(20528.05.9 ).(20524.02.4) */
+/*  font-family     : 'Gill Sans', 'Gill Sans MT',Calibri,'Trebuchet MS', sans-serif; *//*#.(20524.02.4) */
+/*  font-family     : "Bookman Old Style", sans-serif;                                *//* .(20524.02.4 RAM Change Font) */
     margin          : 0;
     padding         : 0;                                                                /* .(20524.01.3 RAM Start with no padding) */
-    padding-top     : 60px;                 /* RAM: 100, 60. Was 3.5rem 56 */           /* .(20524.01.4 RAM Padding starts main element) */
+    padding-top     : 60px;                     /* RAM: 100, 60. Was 3.5rem 56 */       /* .(20524.01.4 RAM Padding starts main element) */
     }
 /* ---------------------------------------------------------------------------------- */
 
@@ -61,39 +72,55 @@ body {
 
 /* MAIN_HEADER */
 /* ---------------------------------------------------------------------------------- */
-                                          /* Are these necessary; should they be in toolbar.css */
-.header {
-    position        : fixed;              /* not absolute */
+                                                /* Should these be in toolbar.css */
+.header {                                                                               /* .(20528.01.2 Beg RAM Not used) */
+    position        : fixed;                    /* not absolute */
     top             : 0px;
     left            : 0px;
-    height          : 56px;               /* RAM: 96 = 100 - 4, 56 = 60 - 4 */          /* .(20524.01.5 RAM Body Padding-top/heading/toolbar-height starts main element) */
+    height          : 56px;                     /* RAM: 96 = 100 - 4, 56 = 60 - 4 */    /* .(20525.07.2).(20524.01.5 RAM Body Padding-top/heading/toolbar-height starts main element) */
     width           : 100%;
-    background      : #3ADD63;            /* Light Green */
-/*  background      : #99D9E9;  */        /* Light Blue  */
-/*  background      : #80AFB5;  */        /* Blue Grey   */
-/*  font-family     : "Bookman Old Style", sans-serif; */
-    border          : 2px solid transparent;
-    }
+    background      : #3ADD63;                                                          /* .(20525.05.5 RAM Change Header color: #3ADD63 Light Green, #99D9E9 Light Blue, #80AFB5 Blue Grey) */
+    border          : 2px solid transparent;                                            /* .(20525.07.3 RAM Make space for guide border) */
+    }                                                                                   /* .(20528.01.2 End) */
 
-.main-header-logo {                                                                     /* .(20526.01.1 RJS Addt font logo).(20524.04.2 RAM Class name was: .main-header-logo__brand) */
+.main-header {                                                                          /* .(20528.01.3 RAM Opps, I left it out) */
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    height          : 56px;                     /* RAM: 96 = 100 - 4, 56 = 60 - 4 */    /* .(20528.01.3 RAM Added).(20525.07.4).(20524.01.5 RAM Body Padding-top/heading/toolbar-height starts main element) */
+    background      : #2ddf5c;
+    padding         : 0.5rem 1rem;
+    z-index         : 60;
+    display         : -webkit-box;
+    display         : -ms-flexbox;
+    display         : -webkit-flex;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    border          : 2px solid transparent;                                            /* .(20525.07.5) */
+    }                                                                                   /* .(20528.01.3 End) */
+
+.main-header-logo {                                                                     /* .(20526.01.1 Beg RJS Add font logo).(20524.04.2 RAM Class name was: .main-header-logo__brand) */
     color           : #0e4f1f;
     text-decoration : none;
     font-weight     : bold;
 /*  width           : 20px; */
     }
 
-.main-header-brand img {
-    height          : 2.5rem;
+.main-header_brand img {
     vertical-align  : middle;
 /*  width           : 100%; */
-  }
+    height          : 36px;
+    padding         : 10px 0px 0px 10px;
+    }                                                                                  /* .(20526.01.1 End) */
 
 
 /* NEW IMAGE SECTION */
 /* ---------------------------------------------------------------------------------- */
 main {
-    height          : 496px;
-    border          : 2px solid transparent;
+    height          : 496px;                                                            /* .(20528.05.13 RAM Was: 496px).(20525.07.6 RAM Set to 4px less than desired height) */
+    border          : 2px solid transparent;                                            /* .(20528.05.14 RAM Was:   0px).(20525.07.7) */
     }
 
 .image-section h1 {                                                                     /* .(20524.04.3 RJS Added) */
@@ -101,40 +128,45 @@ main {
     padding         : 0px;
     padding-top     : 10px;
     text-align      : center;
-/*  vertical-align  : middle; */            /* no workie */
+/*  vertical-align  : middle; */                /* no workie */
 /*  border          : 2px solid transparent; */
     }
 
 #product-overview {
     background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-    url("assets/images/freedom.jpg") center/cover no-repeat border-box,
-/*  url("assets/images/monaco-blue.jpg"     ) center/cover no-repeat border-box,      *//* .(20525.03.3 RJS Changed background image) */
-/*  url("assets/images/monaco-blue-soft.jpg") center/cover no-repeat border-box,      *//* .(20525.03.4) */
+    url( "assets/images/freedom.jpg"         ) center/cover no-repeat border-box,       /* .(20525.03.3 RJS Change background image) */
+/*  url( "assets/images/monaco-blue.jpg"     ) center/cover no-repeat border-box, */    /*#.(20525.03.3) */
+/*  url( "assets/images/monaco-blue-soft.jpg") center/cover no-repeat border-box, */    /*#.(20525.03.4) */
     #ff1b68;
 
-    position        : relative;
-/*  top             : 50px; */
-    left            : 0px;
-    width           : 100%;                 /* Same as 100vh */
-    height          : 33%;                  /* same as  33vh */
+
+
+
+
+    position              : relative;
+/*  top                   : 50px; */
+    left                  : 0px;
+    width                 : 100%;               /* Same as 100vh */
+    height                : 33%;                /* same as  33vh */
     }
 
 #product-overview_xx {
     background            : linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent);
     background-color      : #1bfff7;
 
-    background            : url("assets/images/freedom.jpg");
-/*  background            : url("assets/images/monaco-blue-soft.jpg"); */
-/*  background-size       : auto;          */   /* no workie */
-/*  background-size       : contain;       */   /* best fit within element perserving aspect ratio, resizes */
-/*  background-size       : center/cover;  */   /*not valid */
+    background            : url("assets/images/freedom.jpg");                           /* .(20528.05.22).(20525.03.4) */
+/*  background            : url("assets/images/monaco-blue-soft.jpg"); */               /*#.(20528.05.23) */
+
+/*  background-size       : auto;         */    /* no workie */
+/*  background-size       : contain;      */    /* best fit within element perserving aspect ratio, resizes */
+/*  background-size       : center/cover; */    /*not valid */
     background-size       : cover;              /* matches longest width or height of element perserving aspect ratio, resizes */
-/*  background-size       : auto;          */   /* default: maintains position, cropped within height/width, but if a % resizing shows more */
-/*  background-size       : 960px 640px;   */   /* fills width height, up to element size if not %, ignores aspect ratio */
+/*  background-size       : auto;         */    /* default: maintains position, cropped within height/width, but if a % resizing shows more */
+/*  background-size       : 960px 640px;  */    /* fills width height, up to element size if not %, ignores aspect ratio */
 
     background-repeat     : no-repeat;
     background-clip       : border-box;
-    background-color      : #ff1b68;
+/*  background-color      : #ff1b68;      */
 
     position              : relative;
 /*  top                   : 50px;   */
@@ -153,19 +185,19 @@ main {
 /*  background-position   : left 10% bottom 20%; */
 /*  background-position   : *//* center top left bottom right */
 
-/*  background-size       : cover;      */
-/*  background-size       : 800px 400px;*/
+/*  background-size       : cover;        */
+/*  background-size       : 800px 400px;  */
 /*  background-size       : *//* auto, contain, cover, 0vw, calc( 1 + 4), inherit, initial, unset, var( ) */
 
-/*  background-repeat     : no-repeat;  */
+/*  background-repeat     : no-repeat;    */
 
 /*  background-origin     : *//* content-box, padding-box, border-box */
 /*  background-clip       : *//* content-box, padding-box, border-box */
 
-/*  background-color      : #ff1b68;    */
+/*  background-color      : #ff1b68;      */
     }
 
-#product-overview h1 {
+#product-overview h1 {                                                                  /*#.(20526.05.1 RAM Add _xx to remove text gradient) */
     font-family           : "Anton", sans-serif;
     position              : absolute;
     bottom                : 5%;
@@ -175,9 +207,9 @@ main {
 /*  color                 : white;
     text-shadow           : -3px -4px rgb(234, 124, 40); */
 
-    background            : linear-gradient(to right, #eee, rgb(234, 124, 40));
-   -webkit-background-clip: text;               /* s.b. background-clip: text;  */
-   -webkit-text-fill-color: transparent;
+    background            : linear-gradient(to right, #eee, rgb(234, 124, 40));         /* .(20525.09.1 RAM Add gradient to title over image) */
+   -webkit-background-clip: text;               /* s.b. background-clip: text;  */      /* .(20525.09.2) */
+   -webkit-text-fill-color: transparent;                                                /* .(20525.09.3) */
     }
 
 @media ( min-width: 640px) and ( min-height: 640px) {  /* 40rem = 640px; */
@@ -219,7 +251,7 @@ h1 {                                            /* H1 Style if not overridden */
     }
 
 .main-section h1 {                              /* .(20524.04.4 RJS Added) */
-    background            : white;              /*  was: cornflowerblue; */
+    background            : white;              /*  was: cornflowerblue, then white; */
 /*  position              : relative; */
     height                : 74px;               /* calc( 74 = (116 = 500px - 384px ) - ( padding-top:40 + Guide2:2 ); */
 /*  width                 : 100%;     */        /* default for display: block */
