@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+##=========+====================+================================================+
+##RD         index.html         | FRApps HTML Custom App
+##DESC     .--------------------+-------+---------------+------+-----------------+
+#            Main HTML page for 1c-html-custom-app
+#
+##LIC      .--------------------+----------------------------------------------+
+#            Copyright (c) 2022 8020Data-FormR * Released under
+#            MIT License: http://www.opensource.org/licenses/mit-license.php
+#
+##CHGS     .--------------------+----------------------------------------------+
+# .(20512.01  5/12/22 RAM  9:30a| Created App Folders: ./src/assets/images & logos
+# .(20512.02  5/26/22 RAM  9:50a| Modify package.json with new port number, name, etc
+
+# .(20524.01  5/24/22 RAM 10:00a| Use new stylesheets
+# .(20524.03  5/24/22 RAM 10:20a| Copy and modify footer
+# .(20524.04  5/24/22 RJS  9:00a| Add two new main sections
+
+# .(20525.01  5/25/22 RAM  9:00a| Changed Title and Logo
+# .(20525.02  5/25/22 RAM 10:00a| Change menu item names
+# .(20525.03  5/25/22 RJS 11:00a| Changed background image
+
+# .(20526.01  5/26/22 RJS 10:00a| Add font based logo
+# .(20526.02  5/26/22 RAM 11:00a| Add responsive sidebar
+# .(20526.05  5/26/22 RJS 12:00p| Add title over image
+##SRCE     +====================+===============================================+
+-->
+
+<!-- ------------------------------------------------------------------------------  -->
+
+<html lang="en">
+
+  <!-- ----------------------------------------------------------------------------  -->
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FormR</title>
+
+    <title>FRApps 1c1a. HTML Custom App by Rick</title>                                           <!-- .(20525.01.1 RAM was uHost) -->
+
+<!--<link rel="shortcut icon" href="favicon.gif">                                              --><!--#.(20525.01.2) -->
+    <link rel="shortcut icon" href="assets/logos/FormR_Logo-05_Black-White-Outline_32x32.ico">    <!-- .(20525.01.2) -->
+<!--<link rel="icon"          href="assets/logos/FormR_Logo-05_Black-White-Outline_32x32.ico"> -->
+<!--<link rel="icon"          href="assets/logos/FormR_Logo-05_Black-Blue-Outline_32x32.ico">  -->
+<!--<link rel="shortcut icon" href="assets/logos/FormR_Logo-05_Black-Blue-Outline_16x16.ico">  -->
+
+<!--<link rel="stylesheet"    href="shared.css"  > -->    <!--#.(20524.01.4 -->
+<!--<link rel="stylesheet"    href="main.css"    > -->    <!--#.(20524.01.5 -->
+    <link rel="stylesheet"    href="index.css"   >        <!-- .(20524.01.5 -->
+    <link rel="stylesheet"    href="toolbar.css" >        <!-- .(20524.01.6 -->
+    <link rel="stylesheet"    href="footer.css"  >        <!-- .(20524.01.7 -->
+
+  </head>
+
+  <!-- ----------------------------------------------------------------------------  -->
+
+  <body>
+
+    <!-- --------------------------------------------------------------------------  -->
+
+    <header  class    ="header guide2" >
+
+<!--  <div>
+        <button class="toggle-button">             -->                                  <!-- .(20526.02.1 Beg RAM Add Responsive sidebar) -->
+<!--      <span class="toggle-button_bar"></span>
+          <span class="toggle-button_bar"></span>
+          <span class="toggle-button_bar"></span>
+        </button>                                  -->
+
+<!--    <a href="index.html" class="main-header_brand">-->                              <!-- .(20526.01.1 Beg RJS Add font based logo) -->
+          <!--<h1 class="formr">FormR</h1> --><!--
+        </a>
+      </div>
+-->
+      <nav   class    ="toolbar_nav">
+        <div class    ="toolbar_nav-items">
+          <ul>
+        <!-- <li><a href="#" >                                                               .(20526.01.1 Beg RJS Add font based logo) -->
+          <!-- <img src="assets/logos/FormR_Logo_Robin.gif" style="height: 36px;"></a>  -->
+        <!-- </li>                                                                           .(20526.01.1 End) -->
+            <li><a href="#" >Package</a></li>                                           <!-- .(20525.02.1 Beg RAM Change Menu Item Names) -->
+            <li><a href="#" >Customers</a></li>
+<!--        <li><a href="#" >FAQs </a></li>                                          -->
+            <li><a href="#" >Register</a></li>                                          <!-- .(20525.02.1 End) -->
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- --------------------------------------------------------------------------  -->
+
+    <main class="guide2-blue" style="height: 500px;">
+
+        <div class="image-section guide2-green" id="product-overview">                  <!-- .(20524.04.1 Beg RJS Add new sections) -->
+            <h1>
+<!--            <img src="assets/images/freedom.jpg"     id="image1">  -->              <!--#.(20525.03.1 RJS Change background image) -->
+<!--            <img src="assets/images/monaco-blue.jpg" id="image1">  -->              <!--#.(20525.03.2 -->
+<!--            &#60;image-section&#62;   -->
+                <h1>Get the freedom you deserve.</h1>                                   <!-- .(20526.05.1)-->
+<!--            <h1>BlueNSX Title</h1>                                               --><!-- .(20526.05.1 RJS Add title over image) -->
+
+            </h1>
+        </div>
+
+        <div class="main-section guide0 green">
+            <h1>
+                &#60;main-section&#62;
+            </h1>
+        </div>                                                                          <!-- .(20524.04.1 End) -->
+    </main>
+
+    <!-- --------------------------------------------------------------------------  -->
+
+    <footer class="main-footer guide1" >             <!-- .(20524.03.1 Beg -->
+        <nav>
+            <ul class="main-footer-links">
+                <li class="main-footer-link"><a href="#">Support</a></li>
+                <li class="main-footer-link"><a href="#">Terms of Use</a></li>
+            </ul>
+        </nav>
+    </footer>                                                                           <!-- .(20524.03.1 End) -->
+
+    <!-- --------------------------------------------------------------------------  -->
+
+  </body>
+</html>
+
+<!-- ------------------------------------------------------------------------------  -->
+
+

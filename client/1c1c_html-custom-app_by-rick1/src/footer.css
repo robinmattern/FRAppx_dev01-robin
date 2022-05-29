@@ -1,0 +1,71 @@
+/*
+##=========+====================+================================================+
+##RD         footer.css         | FRApps HTML Custom App Footer Stylesheet
+##DESC     .--------------------+-------+---------------+------+-----------------+
+#            Stylesheet for 1c-html-custom-app
+#
+##LIC      .--------------------+----------------------------------------------+
+#            Copyright (c) 2022 8020Data-FormR * Released under
+#            MIT License: http://www.opensource.org/licenses/mit-license.php
+#
+##CHGS     .--------------------+----------------------------------------------+
+# .(20524.03  5/24/22 RAM 10:20p| Copy and modify footer
+# .(20525.05  5/25/22 RAM  5:00p| Change header background and font colors 
+
+##SRCE     +====================+===============================================+
+*/
+
+/* MAIN_FOOTER */
+/* ------------------------------------------------------------------------------------- */
+.main-footer {
+    height          : 44px;
+    background      : #2ddf5c;              /* .(20525.05.5 RAM Was: #2ddf5c;, then cornflowerblue;, now #80AFB5;) */
+/*  background      : cornflowerblue;     */
+/*  background      : rgb( 75, 136, 248); */
+/*  background      : black;   */
+/*  background      : rgb(115, 178, 185); */
+/*  margin-top      : 15px;    */
+/*  grid-row        : 3 / 4;   */
+/*  grid-area       : footer;  */
+    }
+
+.main-footer-links {
+    list-style      : none;
+/*  margin          : 20px; */
+/*  padding         : 0;    */
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    }
+
+.main-footer-link {
+    font-size       : 24px;                 /* .(20524.03.2 RAM Added) */
+/*  margin          : 8px 8px; */           /* .(20524.03.3 RAM Was: 8px 0; no workie) */
+/*  margin-top      : 50px;    */           /* .(20524.03.3 RAM No workie) */
+    padding-top     :  7px;                 /* .(20524.03.3 RAM Do workie) */
+    }
+
+.main-footer-link a {
+    color           : black;              /* .(20525.05.6 RAM To: white, was: black) */
+/*  text-shadow     : 3px 1.5px #070707; */
+    font-weight     : bold;
+    text-decoration : none;
+    }
+
+.main-footer-link a:hover,
+.main-footer-link a:active {
+    color           : #ccc;               /* .(20525.05.7 RAM To: #fa923f, was: #ccc) */
+    }
+
+@media (  min-width : 40rem) {
+  .main-footer-link {
+    margin          : 0 1rem;
+    }
+  .main-footer-links {
+    flex-direction  : row;
+    justify-content : center;
+    }
+  }
+
+/* ------------------------------------------------------------------------------------- */
+
