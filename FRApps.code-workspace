@@ -3,10 +3,5 @@
         {
             "path": "."
         }
-    ],
-    "settings": {
-      "liveServer.settings.CustomBrowser": "chrome",
-      "liveServer.settings.port": 5500,
-      "liveServer.settings.NoBrowser": false    
-    }
+    ]
 }
