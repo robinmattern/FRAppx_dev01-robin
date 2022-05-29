@@ -1,0 +1,69 @@
+/*
+##=========+====================+================================================+
+##RD         footer.css         | FRApps HTML Custom App Footer Stylesheet
+##DESC     .--------------------+-------+---------------+------+-----------------+
+#            Stylesheet for 1c-html-custom-app
+#
+##LIC      .--------------------+----------------------------------------------+
+#            Copyright (c) 2022 8020Data-FormR * Released under
+#            MIT License: http://www.opensource.org/licenses/mit-license.php
+#
+##CHGS     .--------------------+----------------------------------------------+
+# .(20524.03  5/24/22 RAM 10:20p| Copy and modify footer
+# .(20525.05  5/25/22 RAM  5:00p| Change header background and font colors
+# .(20525.07  5/25/22 RAM  3:45p| Add guide styles
+# .(20525.08  5/25/22 RAM  7:30p| Add shadow to menu items
+# .(20528.05  5/28/22 RAM  4:00p| 4 cusomization changes
+
+##SRCE     +====================+===============================================+
+*/
+
+/* MAIN_FOOTER */
+/* ------------------------------------------------------------------------------------- */
+.main-footer {
+    height          : 46px;                     /* .(20525.07.8 RAM Set to 4px less than desired height) */
+    background      : #80AFB5;                  /* .(20528.05.1).(20525.05.5 RAM Was: #2ddf5c;, then cornflowerblue;, now #80AFB5;) */
+/*  grid-row        : 3 / 4;   */               /*  What is this about? */
+/*  grid-area       : footer;  */               /*  What is this about? */
+    border          : 2px solid transparent;    /* .(20525.07.9) */
+    }
+
+.main-footer-links {
+    list-style      : none;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    margin-top      : 0px;                      /* .(20524.03.4 RAM No vertical margin. Was 7px) */
+    }
+
+.main-footer-link {
+    font-size       : 24px;                     /* .(20524.03.2 RAM Added) */
+/*  margin          : 8px 8px; */               /* .(20524.03.3 RAM Was: 8px 0; no workie) */
+/*  margin-top      : 50px;    */               /* .(20524.03.3 RAM No workie) */
+    padding-top     :  7px;                     /* .(20524.03.3 RAM Do workie).(20524.03.4 RAM Jeeze Louise) */
+    }
+
+.main-footer-link a {
+    color           : white;                    /* .(20528.05.2).(20525.05.6 RAM To: white, was: black) */
+    text-shadow     : 3px 1.5px #070707;        /* .(20528.05.3).(20525.08.1 RAM Add shadow to menu items) */
+    font-weight     : bold;
+    text-decoration : none;
+    }
+
+.main-footer-link a:hover,
+.main-footer-link a:active {
+    color           : #fa923f;                  /* .(20528.05.4).(20525.05.7 RAM To: #fa923f, was: #ccc) */
+    }
+
+@media (  min-width : 40rem) {
+  .main-footer-link {
+    margin-left     : 20px;                     /* .(20524.03.5 RAM To margin 20px. Was margin: 16px = 1rem) */
+    }
+  .main-footer-links {
+    flex-direction  : row;
+    justify-content : center;
+    }
+  }
+
+/* ------------------------------------------------------------------------------------- */
+
