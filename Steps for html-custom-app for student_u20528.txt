@@ -1,0 +1,77 @@
+| Change No| Finished  By  Time | Comment                                               | Filename
+|----------|--------------------|-------------------------------------------------------|---------------------------
+|.(20512.01|  5/12/22 RAM  9:30a| Create App Folders: ./src/assets/images & logos       |
+|.(20512.02|  5/12/22 RAM 10:00p| Create toolbar.css                                    | toolbar.css
+|.(20512.03|  5/12/22 RAM 10:30p| Create index.css                                      | index.css
+
+|.(20512.02|  5/12/22 RAM  9:50a| Modify package.json with new port number, name, etc   | package.json
+
+|.(20524.01|  5/24/22 RAM  9:15a| Create new stylesheets, copy and/or remove styles     | index.css, toolbar.css, footer.css
+|.(20524.01|  5/24/22 RAM 10:00a| Use new stylesheets                                   | index.html
+|.(20524.01|  5/24/22 RAM 10:00a| Use new stylesheets                                   | toolbar.css
+
+|.(20524.02|  5/24/22 RAM 10:10a| Changed Fonts                                         | index.css
+
+|.(20524.03|  5/24/22 RAM 10:20a| Copy and modify footer                                | index.html
+|.(20524.03|  5/24/22 RAM 10:20p| Copy and modify footer                                | footer.css
+|.(20524.03|  5/24/22 RAM 10:20p| Copy and modify footer                                | index.css
+
+|.(20524.04|  5/24/22 RJS  9:00a| Add two new main sections                             | index.html
+|.(20524.04|  5/24/22 RJS  9:00a| Add two new main sections                             | index.css
+
+|.(20524.05|  5/24/22 RAM 11:30a| Define a base font size: rem                          | index.css
+
+|.(20525.01|  5/25/22 RAM  9:00a| Changed title and favicon.ico                         | index.html
+
+|.(20525.02|  5/25/22 RAM 10:00a| Change menu item names                                | index.html
+
+|.(20525.03|  5/25/22 RJS  9:00a| Change background image                               | index.css
+|.(20525.03|  5/25/22 RJS 11:00a| Change background image                               | index.html
+
+|.(20525.04|  5/25/22 RAM 12:00p| Change menu font name and size to 36                  | toolbar.css
+|.(20525.04|  5/25/22 RAM 12:00p| Change menu font name and size to 36                  | index.css
+
+|.(20525.05|  5/25/22 RAM  5:00p| Change header background and font colors              | footer.css
+|.(20525.05|  5/25/22 RAM  5:00p| Change header background and font colors              | toolbar.css
+
+|.(20525.07|  5/25/22 RAM  3:45p| Add guide styles                                      | index.css
+|.(20525.07|  5/25/22 RAM  3:45p| Add guide styles                                      | footer.css
+
+|.(20525.08|  5/25/22 RAM  7:30p| Add shadow to menu items                              | toolbar.css
+|.(20525.08|  5/28/22 RAM  4:45p| Add shadow to menu items                              | main-navbar.css
+
+----------------------------------------------------------------------------------------------
+
+|.(20526.01|  5/26/22 RJS 10:00a| Add font based Logo                                   | index.css
+|.(20526.01|  5/26/22 RJS 10:00a| Add font based logo                                   | index.html
+
+|.(20526.02|  5/26/22 RAM 11:00a| Add responsive sidebar   (aka mobile-nav)             | index.html
+
+|.(20526.03|  5/26/22 RAM 11:30a| Add register form back                                | index.html
+|.(20526.07|  5/26/22 RJS  1:00p| Add register animation back                           | index.html
+
+|.(20526.04|  5/26/22 RJS 12:00p| Right justify menu items                              | toolbar.css
+
+|.(20526.05|  5/26/22 RJS  1:00p| Add title over image                                  | index.html
+
+----------------------------------------------------------------------------------------------
+
+|.(20526.06|  5/28/22 RAM  7:45p| Modify shared.js                                      | shared.js
+
+|.(20526.04|  5/28/22 RAM  8:30p| Left justify menu items                               | index.html
+
+|.(20528.01|  5/28/22 RAM  9:00a| Opps: Use main-header rather than header              | index.css
+|.(20528.01|  5/28/22 RAM  9:00a| Opps: Use main-header rather than header              | index.html
+
+|.(20528.03|  5/28/22 RAM  9:15a| Create main-navbar.css                                | main-navbar.css
+|.(20528.03|  5/28/22 RAM  9:40a| Fix toolbar with main-navbar
+|.(20528.03|  5/24/22 RAM 10:00a| Use main-navbar stylesheet instead of toolbar.css     | main-navbar.css
+
+|.(20528.04|  5/28/22 RAM 10:00a| Define SASS Variables                                 | index.css
+
+|.(20528.04|  5/28/22 RAM 10:30a| Use SASS Variables                                    | main-navbar.css
+
+|.(20528.05|  5/28/22 RAM  4:10p| 4 cusomization changes                                | main-navbar.css
+|.(20528.05|  5/28/22 RAM  6:20p| 23 cusomization changes                               | index.css
+|.(20528.05|  5/28/22 RAM  4:10p| 23 cusomization changes                               | index.css
+
