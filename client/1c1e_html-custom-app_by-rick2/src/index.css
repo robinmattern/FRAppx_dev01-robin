@@ -1,0 +1,579 @@
+/*
+##=========+====================+================================================+
+##RD         index.css          | FRApps HTML Custom App
+##DESC     .--------------------+-------+---------------+------+-----------------+
+#            Stylesheet for 1c-html-custom-app
+#
+##LIC      .--------------------+----------------------------------------------+
+#            Copyright (c) 2022 8020Data-FormR * Released under
+#            MIT License: http://www.opensource.org/licenses/mit-license.php
+#
+##CHGS     .--------------------+----------------------------------------------+
+# .(20512.01  2/15/22 RAM 10:00p| Created
+# .(20524.04  5/24/22 RJS  9:00a| Added two new sections
+# .(20528.05  5/28/22 RAM  9:00a| Removed 2px transparent border
+# .(20530.01  5/29/22 RJS  3:30p| Minor changes
+# .(20530.02  5/29/22 RJS 11:00a| BlueNSX Changes
+# .(20531.01  5/31/22 RAM  9:00a| Is #image-section used?
+
+##SRCE     +====================+===============================================+
+*/
+
+/** ==================================================================================================== **/
+/** index.css (aka shared.css) **/
+/** ------------------------------------------------------------------------------------------ **/
+/** BODY **/
+/** --------------------------------------------------------------------------------- */
+/*  @import url('https://fonts.googleapis.com/css?family=Roboto:100,400,900');        *//*#.(20530.02.1 RJS) */
+/*  @import url('https://fonts.googleapis.com/css?family=Anton');                     *//*#.(20530.02.1 RJS) */
+/*  @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');        *//*#.(20530.02.1 RJS) */
+    @import url('https://fonts.googleapis.com/css?family=Bookman Old Style');           /* .(20530.02.1 RJS) */
+
+:root {
+  --menu-bar-backgrnd-color     : rgb(171, 192, 233);
+  --menu-item-font-forgnd-color : white;
+  --menu-item-font-hilite-color : rgb(233, 173, 155);
+  --sign-in-button-hilite-color : #af19bd;
+  --sign-in-font-foregnd-color  : white;
+  --text-f-font-color           : red;     
+  --text-r-font-color           : rgb(233, 173, 155);
+    }
+
+ * {
+    box-sizing  :  border-box;
+    }
+
+ html {
+    height      :  100%;
+    }
+
+ body {
+ /* font-family : "Montserrat",        sans-serif; */                                   /*#.(20530.02.2 RJS) */
+    font-family : "Bookman Old Style", sans-serif;                                      /* .(20530.02.2 RJS).(20531.01.1 RAM Removed double ;;) */
+    margin      :  0;
+    padding-top :  3.5rem;
+    height      :  100% !important;                                                     /*#.(20530.01.1 RJS) */
+    }
+
+@supports (display : grid) {
+  body {
+    display     :  grid;
+    grid-template-rows  :  3.5rem auto fit-content(8rem);
+    grid-template-areas : "header"
+                          "main"
+                          "footer";
+    padding-top :  0;
+    height      :  100%;
+    }
+  }
+
+ main {
+/*  grid-row    :  2 / 3; */
+    grid-area   :  main;
+    height      : 500px;                                            /* .(20528.05.14 RAM Was: 496px).(20525.07.6 RAM Set to 4px less than desired height) */
+    border      : 0px solid transparent;                            /* .(20528.05.15 RAM Was:   0px).(20525.07.7) */
+    }
+
+/**  BACKDROP  **/
+/*   -------------------------------------------------------------------------------- */
+
+.backdrop {
+    display     :  none;
+    position    :  fixed;
+    opacity     :  0;
+    top         :  0;
+    left        :  0;
+    z-index     :  100;
+    width       :  100vw;
+    height      :  100vh;
+    background  :  rgba(0, 0, 0, 0.5);
+    transition  :  opacity 0.2s linear;
+    }
+
+/**  MAIN HEADER  **/
+/*   ------------------------------------------------------------------------------------------ */
+
+.main-header {
+/*  border    :  green solid 10px; */                               /*#.(20530.01.2 RJS) */
+    width       :  100%;
+    position    :  fixed;
+    top         :  0;
+    left        :  0;
+    background  :  var(--menu-bar-backgrnd-color);                  /* .(20531.02.12 RAM Was: #3ADD63) */
+/*  border-bottom : darkblue 2px solid; */                          /*#.(20530.01.3 RJS) */
+    padding     :  0.5rem 1rem;
+    z-index     :  60;
+    display     : -webkit-box;
+    display     : -ms-flexbox;
+    display     : -webkit-flex;
+    display     :  flex;
+    align-items :  center;
+    justify-content : space-between;
+    }
+
+.main-header-signup {
+    width       :  100%;
+    position    :  fixed;
+    top         :  0;
+    left        :  0;
+    background  :  var(--menu-bar-backgrnd-color);                  /* .(20531.02.12 RAM Was: #3ADD63) */
+/*  border-bottom: darkblue 2px solid;  */                        /*#.(20530.01.4 RJS) */
+    padding     :  0.5rem 1rem;
+    z-index     :  60;
+    display     : -webkit-box;
+    display     : -ms-flexbox;
+    display     : -webkit-flex;
+    display     :  flex;
+    align-items :  center;
+    justify-content : space-between;
+    }
+
+/** ==================================================================================================== **/
+/** main-navbar.css
+/** ------------------------------------------------------------------------------------------ **/
+/** MAIN NAVBAR **/
+/** --------------------------------------------------------------------------------- */
+/**  MAIN NAVBAR TOGGLE BUTTON  **/
+/*   ---------------------------------------- */
+
+.toggle-button {
+    width           :  3rem;
+    background      :  transparent;
+    border          :  none;
+    cursor          :  pointer;
+    padding-top     :  0;
+    padding-bottom  :  0;
+    vertical-align  :  middle;
+    margin-right    :  10px;                                        /* .(20530.02.3 RJS Added) */
+    }
+
+.toggle-button:focus {
+    outline         :  none;
+    }
+
+.toggle-button-bar {
+    width           :  100%;
+    height          :  0.2rem;
+    background      :  black;
+    display         :  block;
+    margin          :  0.6rem 0;
+    }
+
+/**  MAIN NAVBAR LOGO  **/
+/*   ---------------------------------------- */
+
+.main-header-brand {
+    color           : #0e4f1f;
+    text-decoration :  none;
+    font-weight     :  bold;
+/*  width           :  20px; */
+    }
+
+.main-header-brand img {
+    height          :  2.5rem;
+    vertical-align  :  middle;
+/*  width           :  100%; */
+    }
+
+/**  MAIN NAV ITEMS  **/
+/*   ---------------------------------------- */
+
+.main-nav {
+    display         :  none;
+    }
+
+.main-nav-items {
+    margin          :  14px 0px 0px 0px;
+    padding         :  0;
+    list-style      :  none;
+    display         :  flex;
+    }
+
+.main-nav-item {
+    margin          :  0 10px;                                                          /* .(20531.02.4 RAM Was: 0rem 1rem, aka: 0px 16px between items) */
+    font-size       :  42px;                                                            /* .(20530.02.12 RJS Was: 1.5rem) */
+    font-family     : "Bookman Old Style", sans-serif;                                  /* .(20530.02.13 RJS) */
+    }
+
+.main-nav-item a,
+.mobile-nav-item a {
+    color           : var(--menu-item-font-forgnd-color);                              /* .(20530.02.12 RJS Was: var(--menu-bar-bakgrnd-color)) */ 
+    text-shadow     :  2px 2px 12px #000000;
+    text-decoration :  none;
+    font-weight     :  bold;
+    padding         :  0.2rem 0;
+    }
+
+.main-nav-item a:hover,
+.main-nav-item a:active {
+    color           :  var(--menu-item-font-hilite-color);
+    border-bottom   :  5px solid white;
+    }
+
+/**  CTA BUTTON  **/ /* Call to Action */
+/*   ---------------------------------------- */
+
+
+
+
+
+.main-nav-item-cta a,
+.mobile-nav-item-cta a {
+    color       :  var(--sign-in-font-foregnd-color);       /* .(20531.06.x RAM Was: white) */ 
+    background  :  var(--sign-in-button-hilite-color);      /* .(20531.06.01 RAM Use SASS Variables) */
+    padding     :  0px 8px 5px;                             /* .(20531.02.4 RAM Was: 0.5rem 1rem, aka: 8px 16px ) */
+    border-radius   :  8px;
+    }
+
+.main-nav-item-cta a:hover,
+.main-nav-item-cta a:active,
+.mobile-nav-item--cta a:hover,
+.mobile-nav-item--cta a:active {
+    color       :  var(--sign-in-button-hilite-color);      /* .(20531.06.01 RAM Use SASS Variables) */
+    background  :  var(--sign-in-font-foregnd-color);       /* .(20531.06.x RAM Was: white) */
+    border      :  none;
+    }
+
+@media (min-width : 40rem) {
+ .toggle-button {
+    display     :  none;
+    }
+
+ .main-nav {
+    display     :  flex;
+    }
+  }
+
+/**  CTA BUTTON ANIMATION  **/
+/*   ---------------------------------------- */
+
+.main-nav-item-cta {
+    animation   :  wiggle 400ms 2s 8 ease-out none;
+    }
+
+@keyframes wiggle {
+  0% {
+    transform   :  rotateZ(0);
+    }
+  50% {
+    transform   :  rotateZ(-10deg);
+    }
+  100% {
+    transform   :  rotateZ(10deg);
+    }
+  }
+
+/** ==================================================================================================== **/
+/** footer.css **/
+/** ------------------------------------------------------------------------------------------ **/
+/** MAIN FOOTER **/
+/** --------------------------------------------------------------------------------- */
+
+#footer-logo {
+    position    :  absolute;
+    top         :  100%;
+    left        :  20px;
+    }
+
+.main-footer {
+/*  border-top  :  darkblue 2px solid;  */                          /*#.(20530.01.7 RJS) */
+/*  position    :  relative; */                                     /* .(20530.02.4 RJS) */
+    position    :  fixed;                                           /* .(20530.02.4 RJS) */
+    top         :  790px;                                           /* .(20530.02.5 RJS Fixes size of main block) */
+    height      :  50px;    
+    width       :  100%;
+/*  border      :  green solid 10px;    */                          /*#.(20530.01.6 RJS) */
+    background  : var(--menu-bar-backgrnd-color);                   /* .(20530.02.6 RJS Was black) */
+    padding     :  0px;                                             /* .(20530.02.7 RJS Was 2rem)  */
+    margin-top  :  0px;                                             /* .(20530.02.8 RJS Was 3rem)  */
+/*  grid-row    :  3 / 4;  */
+/*  grid-area   :  footer; */                                       /*#.(20530.01.8 RJS) */
+    }
+
+.main-footer-links {
+    list-style  :  none;
+    margin      :  0px;                                             /* .(20530.02.9 RJS Was 0px) */
+    padding     :  0px;
+    display     :  flex;
+    flex-direction: column;
+    align-items :  center;
+    }
+
+.main-footer-link {
+    margin          :  0 10px;                                                          /* .(20531.02.4 RAM Was: 0rem 1rem, aka: 0px 16px between items) */
+/*  height          :  50px; */                                                         /* .(20531.02.4 RAM) */
+    padding-top     :  8px;                                                             /* .(20531.02.4 RAM) */
+    font-size       :  24px;                                                            /* .(20530.02.12 RJS Was: 1.5rem) */
+    font-family     : "Bookman Old Style", sans-serif;                                  /* .(20530.02.13 RJS) */
+    }
+
+.main-footer-link a {
+    color           :  var(--menu-item-font-forgnd-color);          /* .(20531.06.x) */                                                      /* .(20530.02.12 RJS Was: var(--menu-bar-bakgrnd-color)) */
+    text-shadow     :  2px 2px 12px #000000;
+    text-decoration :  none;
+    font-weight     :  bold;
+    }
+
+.main-footer-link a:hover,
+.main-footer-link a:active {
+    color           : var(--menu-item-font-hilite-color)            /* .(20531.06.1) */
+    }
+
+@media (min-width: 40rem) {
+ .main-footer-link {
+    margin          :  0 1rem;
+    }
+
+ .main-footer-links {
+    flex-direction  :  row;
+    justify-content :  center;
+    }
+  }
+
+/** ==================================================================================================== **/
+/** sidebar.css
+/** ------------------------------------------------------------------------------------------ **/
+/**  MOBILE NAV ITEMS  **/
+/*   ---------------------------------------- */
+
+.mobile-nav {
+    transform   :  translateX(-100%);
+    position    :  fixed;
+    z-index     :  101;
+    top         :  0;
+    left        :  0;
+    background  :  var(--menu-item-font-forgnd-color);        /* .(20531.06.x) */ 
+    width       :  80%;
+    height      :  100vh;
+    transition  :  transform 300ms ease-out;
+    }
+
+.mobile-nav-items {
+    width       :  90%;
+    height      :  100%;
+    list-style  :  none;
+    margin      :  0 auto;
+    padding     :  0;
+    display     :  flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items :  center;
+    }
+
+.mobile-nav-item {
+    margin      :  1rem 0;
+    }
+
+.mobile-nav-item a {
+    font-size   :  36px;                                                                /* .(20530.02.12 RJS Was: 1.5rem) */
+    font-family : "Bookman Old Style", sans-serif;                                      /* .(20530.02.13 RJS) */
+    }
+
+/**  MOBILE SIDEBAR TOGGLE BUTTON  **/
+/*   ---------------------------------------- */
+
+.button {
+    background  :  var(--menu-bar-backgrnd-color);  
+    color       :  var(--sign-in-font-forgnd-color);                                    /* .(20531.06.x RAM Was: white) */ 
+    font        :  inherit;
+    border      :  1.5px solid var(--menu-bar-bakgrnd-color);                           /* .(20530.02.6 RJS Was black) */
+    padding     :  0.5rem;
+    border-radius: 8px;
+    font-weight :  bold;
+    cursor      :  pointer;
+    }
+
+.button:hover,
+.button:active {
+    background  :  var(--sign-in-font-forgnd-color);                                    /* .(20531.06.x RAM Was: white) */ 
+    color       :  var(--menu-bar-backgrnd-color);                                      /* .(20530.02.6 RJS Was black) */
+    }
+
+.button:focus {
+    outline     :  none;
+    }
+
+.button[disabled] {
+    cursor      :  not-allowed;
+    border      : #a1a1a1;
+    background  : #ccc;
+    color       : #a1a1a1;
+    }
+
+.open {
+    display     :  block         !important;
+    opacity     :             1  !important;
+    transform   :  translateY(0) !important;
+    }
+
+/** ==================================================================================================== **/
+/** main-sections.css  (aka main_v0s.css) **/
+/** ------------------------------------------------------------------------------------------ **/
+/**  PRODUCT SECTION  **/
+/*   -------------------------------------------------------------------------------- */
+
+body {
+/*  border      :  yellow solid 10px;*/
+    height      :  100px;
+    margin      :  0;
+    padding     :  0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 40rem) and (min-height: 40rem) {
+ #product-overview {
+    height              :  35vh;                                    /*#.(20530.01.7 RJS Was: 40vh) */
+    background-position :  50% 25%;
+    }
+
+ #product-overview h1 {                                             /*#.(20530.01.7 RJS) */
+    font-size   :  3rem;
+    }
+  }
+
+/**  NEW IMAGE SECTION **/
+/*   -------------------------------------------------------------------------------- */
+/*
+imagesection#image-section {                                       /* .(20530.02.12 RJS Beg Added) */
+/*  border      :  2px solid red; */
+/*  position    :  relative;      |* wierd stuff happens *|
+    position    :  absolute;      |* makes more sense, *|
+    top         :  100px;         |* has no effect unless position is set *|
+    width       :  50px;          |* has no effect because nothing is in block??) *|
+    height      :  40px;
+    margin      :  0;
+    padding     :  0;
+    }  */                                                             /* .(20530.02.12 RJS End) */
+
+#image-section h1 {                                       /* .(20524.04.3 RJS Beg Added) */
+    position    : relative;                               /* offset top is 56???) */ 
+    margin      :  0px;
+/*  border      :  2px solid green; */
+    padding     :  0px;
+    top         : 35px;                                   /* plus 56 + 34 + 1 == top: 91 */
+    width       : 100%;
+    height      : 500px;
+    background         : url("assets/images/monaco-blue-soft.jpg"); /* .(20530.02.13 RJS Was: freedom.jpg)    */
+	background-size    : cover;							    
+    background-repeat  : no-repeat;
+    background-clip    : border-box;
+    background-position: center;
+
+/*  background-color   : blue;  */
+    padding-left: 5%;       
+    padding-top : 380px;
+    }                                                               /* .(20524.04.3 RJS End) */
+
+/* NEW MAIN SECTION */
+/* ---------------------------------------------------------------------------------- */
+bodysection.body-section h1 {                              /* .(20524.04.4 RJS Beg Added) */
+    margin-top  :  35px;                                   /* mystery number: 35px ?? */ 
+/*  border      :  2px solid blue; */
+    background-color: #ccc;
+    padding     :   0px;
+    width       : 100%;
+    height      : 200px;
+    padding-top :  70px;
+    text-align  : center;
+    }                                                               /* .(20524.04.4 RJS End) */                          
+
+/** ==================================================================================================== **/
+/** bluensx-fonts.css
+/** ------------------------------------------------------------------------------------------ **/
+/** blueNSX FONT STYLES **/
+/** --------------------------------------------------------------------------------- */
+/**  Header Logo Font Styles (medium)  **/
+/*   ---------------------------------------- */
+.text-f-med {
+    font-family : "Bookman Old Style", sans-serif;
+    font-size   :  calc( 42px * 1.5);                               /* .(20531.07.1 RAM Adjust relative to nav-bar font size) */              
+    font-weight :  bolder;
+    color       :  var(--text-f-font-color);                        /* .(20531.06.x) */
+    text-shadow :  2px 2px 12px #000000;
+
+    }
+.text-orm-med {
+    font-family : "Bookman Old Style", sans-serif;
+    color       :  var(--menu-item-font-forgnd-color);              /* .(20531.06.x) */ 
+    font-size   :  calc( 42px * 1.3);                               /* .(20531.07.3) */
+    text-shadow :  2px 2px 12px #000000;
+    }
+.text-r-med {
+    font-family : "Bookman Old Style", sans-serif;
+    color       :  var(--text-r-font-color);                        /* .(20531.06.x) */
+    font-size   :  calc( 42px * 1.7);                               /* .(20531.07.3) */ 
+    font-weight :  bolder;
+    text-shadow :  2px 2px 12px #000000;
+    }
+
+/**  Footer Logo Font Styles (medium)  **/
+/*   ---------------------------------------- */
+.text-f-sm {
+    font-family : "Bookman Old Style", sans-serif;
+    font-size   :  30px;
+    font-weight :  bolder;
+    color       :  var(--text-f-font-color);                        /* .(20531.06.x) */
+    text-shadow :  2px 2px 12px #000000;
+
+    }
+.text-orm-sm {
+    font-family : "Bookman Old Style", sans-serif;
+    color       :  var(--menu-item-font-forgnd-color);              /* .(20531.06.x) */
+    font-size   :  30px;
+    font-weight :  bolder;
+    text-shadow :  2px 2px 12px #000000;
+    }
+.text-r-sm {
+    font-family : "Bookman Old Style", sans-serif;
+    color       :  var(--text-r-font-color);                        /* .(20531.06.x) */
+    font-size   :  35px;
+    font-weight :  bolder;
+    text-shadow :  2px 2px 12px #000000;
+    }
+
+/**  blueNSX Font Styles  **/
+/*   ---------------------------------------- */
+.text-b {
+    font-family : "Bookman Old Style", sans-serif;
+    font-size   :  75px;
+    font-weight :  bolder;
+    color       :  cornflowerblue;
+    text-shadow :  2px 2px 12px #000000;
+    }
+
+.text-luensx {
+    font-family : "Bookman Old Style", sans-serif;
+    font-weight :  bolder;
+    font-size   :  40px;
+    color       :  var(--menu-item-font-forgnd-color);              /* .(20531.06.x) */
+    text-shadow :  2px 2px 12px #000000;
+    }
+
+/** ==================================================================================================== **/
+

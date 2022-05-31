@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--
+##=========+====================+================================================+
+##RD         index.html         | FRApps HTML Custom App
+##DESC     .--------------------+-------+---------------+------+-----------------+
+#            Main HTML page for 1c-html-custom-app
+#
+##LIC      .--------------------+----------------------------------------------+
+#            Copyright (c) 2022 8020Data-FormR * Released under
+#            MIT License: http://www.opensource.org/licenses/mit-license.php
+#
+##CHGS     .--------------------+----------------------------------------------+
+# .(20530.03  5/30/22 RJS  9:00a| New Text Logo)
+# .(20531.04  5/31/22 RJS 10:10p| 3 cusomization changes
+# .(20531.05  5/31/22 RJS 10:20a| smaller formR logo
+# .(20531.06  5/31/22 RJS 10:25a| Removed nav
+# .(20601.01  6/01/22 RAM  9:00a| Add Item click events
+
+##SRCE     +====================+===============================================+
+-->
+
+<!-- =================================================================================================================== -->
+<!-- index_v3.html 8020's Modified Class Names with Comment Titles and Lines and Sections commented out -->
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- HEAD -->
+  <!-- --------------------------------------------------------------------------------------------------------- -->
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FRApps 1c - Rick's HTML Custom App by Student</title>                                  <!-- .(20531.04.1 RJS Change Title).(20525.01.1 RAM was uHost) -->
+
+<!--<link rel="shortcut icon" href="favicon.png">                                              --><!--#.(20528.05.29).(20525.01.2) -->
+<!--<link rel="shortcut icon" href="assets/logos/FormR_Logo-05_Black-Blue-Outline_16x16.ico">  --><!--#.(20528.05.29).(20525.01.2 RAM No workie?) -->
+    <link rel="shortcut icon" href="assets/logos/favicon.gif">                                    <!-- .(20531.04.2 RJS).(20528.05.29).(20525.01.2) -->
+
+<!--<link rel="stylesheet"    href="shared.css">                --> <!--#.(20531.04.3) -->
+<!--<link rel="stylesheet"    href="main.css">                  --> <!--#.(20531.04.3) -->
+    <link rel="stylesheet"    href="index.css">                     <!-- .(20531.04.3 RAM Combine into index.css) -->
+  </head>
+
+  <!-- BODY -->
+  <!-- --------------------------------------------------------------------------------------------------------- -->
+  <body>
+
+    <!-- BACKDROP -->
+    <!-- --------------------------------------------------------------------------------------------------- -->
+<!--<div        class="backdrop"></div>-->
+
+    <!-- MODAL WINDOW -->
+    <!-- --------------------------------------------------------------------------------------------------- -->
+<!--<div        class="modal">
+        <h1     class="modal-title">Do you want to continue?</h1>
+        <div    class="modal-actions">
+            <a  class="modal-action" href="start-hosting/index.html" >Yes!</a>
+            <button class="modal-action modal-action-negative" type="button">No!</button>
+        </div>
+    </div>
+ -->
+    <!-- MAIN HEADER -->
+    <!-- ------------------------------------------------------------------------------------------- -->
+    <header class="main-header">
+
+        <!-- MAIN NAVBAR TOGGLE BUTTON -->
+        <!-- ----------------------------------------- -->
+        <div style="margin-top:-8px;">
+<!--
+            <button class="toggle-button">
+              <span class="toggle-button-bar"></span>
+              <span class="toggle-button-bar"></span>
+              <span class="toggle-button-bar"></span>
+            </button>
+ -->
+        <!-- MAIN NAVBAR LOGO -->
+        <!-- ----------------------------------------- -->
+            <a      class="main-header-brand" href="index.html" >
+            <!--<h1 class="formr">FormR</h1>              -->
+            <!--<img  src="images/uhost-icon.png"                        alt="uHost - Your favorite hosting company">--><!--#.(20528.05.30 RAM Use FormR Logo) -->
+            <!--<img  src="assets/images/assets/logos/FormR_Logo-02_White_150x50.png" alt="FRApps - HTML Custom App">--><!--#.(20530.03.1).(20528.05.30) -->
+                <span class="text-f-med">f</span></span><span class="text-orm-med">orm<span class="text-r-med">r</span> <!-- .(20530.03.1 RJS New Text Logo) -->
+            </a>
+
+        </div>
+
+        <!-- MAIN NAV ITEMS -->
+        <!-- ----------------------------------------- -->
+        <nav        class="main-nav">
+            <ul     class="main-nav-items">
+                <li class="main-nav-item">                    <a href="#">Links</a> </li>                         <!-- .(20531.04.3 RJS Beg Was Packages) -->
+                <li class="main-nav-item">                    <a href="#">Cards</a></li>                          <!-- .(20531.04.3 RJS     Was Customers) -->
+                <li class="main-nav-item">                    <a href="#">FAQs</a></li>                           <!-- .(20531.04.3 RJS     Added) -->
+                <li class="main-nav-item  main-nav-item-cta"> <a href="start-hosting/index.html">Sign In</a></li> <!-- .(20531.04.3 RJS End Was Start Hosting) -->
+<!--            <li class="main-nav__item main-nav-item-cta"> <a href="start-hosting/index.html" onclick="ctaButton_onClick (event)">Sign In</a>--><!-- .(20601.01.1 RAM) -->
+            </ul>
+        </nav>
+
+    </header>
+
+        <!-- MOBILE SIDEBAR NAV ITEMS -->
+        <!-- ----------------------------------------- -->
+<!--    <nav        class="mobile-nav">
+            <ul     class="mobile-nav-items">
+                <li class="mobile-nav-item">                      <a href="#">Links</a> </li>                         --><!-- .(20531.04.3 RJS Beg Was Packages) --><!--
+                <li class="mobile-nav-item">                      <a href="#">Cards</a></li>                          --><!-- .(20531.04.3 RJS     Was Cusstomers) --><!--
+                <li class="mobile-nav-item  mobile-nav-item-cta"> <a href="#">FAQs</a></li>                           --><!-- .(20531.04.3 RJS     Added) --><!--
+                <li class="mobile-nav-item  mobile-nav-item-cta"> <a href="start-hosting/index.html">Sign In</a></li> --><!-- .(20531.04.3 RJS End Was Start Hosting) -->
+<!--            <li class="main-nav__item main-nav-item-cta"> <a href="start-hosting/index.html" onclick="ctaButton_onClick (event)">Sign In</a>--><!-- .(20601.01.1 RAM) --><!--
+            </ul>
+        </nav>
+ -->
+    <!-- ----------------------------------------------------------------------------------------------------------- -->
+
+    <!-- MAIN -->
+    <!-- ------------------------------------------------------------------------------------------- -->
+    <main>
+
+        <!--<imagesection id="image-section"> -->
+        <div id="image-section">
+            <!--<img src="assets/images/monaco-blue-soft.jpg" height="150%" width="100%">-->
+            <!--<br><br><br>starts at the top -->
+            
+            <h1>
+                <span class="text-b">b</span><span class="text-luensx">lueNSX's</span>                                  <!-- .(20530.03.2 RJS New Text Logo) -->
+                <span class="text-f-med">f</span><span class="text-orm-med">orm<span class="text-r-med">r</span>        <!-- .(20530.03.3) -->
+            </h1>
+        </div> <!-- </imagesection> -->
+
+        <bodysection class="body-section">
+                <h1>
+                    &#60;bodysection&#62;
+                </h1>
+        </bodysection>
+
+    <!-- MAIN FOOTER -->
+    <!-- --------------------------------------------------------------------------------------------------- -->
+    <footer class="main-footer">
+
+   <!-- .(20531.05.1 RJS Beg allows a smaller formR logo in the footer) --><!--
+            <h1 id="footer-logo">
+                <span class="text-f-sm">f</span><span class="text-orm-sm">orm</span><span class="text-r-sm">r</span>
+            </h1>-->
+   <!-- .(20531.05.1 RJS End) -->
+
+   <!-- <nav> --><!-- .(20531.06.1 RJS Removed nav) -->
+            <ul class="main-footer-links">
+                <li class="main-footer-link"><a href="#">Support</a></li>
+                <li class="main-footer-link"><a href="#">Terms of Use</a>
+                </li>
+            </ul>
+   <!-- </nav> --><!-- .(20531.06.1 RJS Removed nav) -->
+
+    </footer>
+    <!-- --------------------------------------------------------------------------------------------------- -->
+
+    <script src="shared.js"></script>
+
+  </body>
+  <!-- --------------------------------------------------------------------------------------------------------- -->
+
+</html>
